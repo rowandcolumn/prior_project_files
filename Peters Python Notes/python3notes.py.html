@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>python3notes.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(255,102,102); font-style: italic; }
+.s1 { color: rgb(155,194,142); }
+.s2 { color: rgb(255,255,255); font-weight: bold; }
+.s3 { color: rgb(255,0,0); font-weight: bold; }
+.s4 { color: rgb(209,193,1); font-weight: bold; }
+.s5 { color: rgb(155,194,142); font-weight: bold; }
+.s6 { color: rgb(204,120,50); }
+.s7 { color: rgb(197,204,203); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#404040">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+python3notes.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0"># PETER HENRY'S PYTHON 3 EXPERIMENTS &amp; NOTES WHILE LEARNING (2013)</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># PRINT STATEMENTS</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+weight </span><span class="s2">= </span><span class="s3">0.2</span><span class="s1"> 
+animal </span><span class="s2">= </span><span class="s4">&quot;newt&quot;</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">weight</span><span class="s6">, </span><span class="s4">&quot;kg is the weight of the&quot;</span><span class="s6">, </span><span class="s1">animal</span><span class="s5">)</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;{} kg is the weight of the {}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">weight</span><span class="s6">, </span><span class="s1">animal</span><span class="s5">))</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;{0} kg is the weight of the {1}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">weight</span><span class="s6">, </span><span class="s1">animal</span><span class="s5">))</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;{weight} kg is the weight of the {animal}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">weight </span><span class="s2">= </span><span class="s3">500000</span><span class="s6">, </span><span class="s1">animal </span><span class="s2">= </span><span class="s4">&quot;spider&quot;</span><span class="s5">))</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># FINDING IN STRINGS</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+phrase </span><span class="s2">= </span><span class="s4">&quot;the surprise is in here somewhere&quot;</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">phrase.find</span><span class="s5">(</span><span class="s4">&quot;surprise&quot;</span><span class="s5">))</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">phrase.replace</span><span class="s5">(</span><span class="s4">&quot;surprise&quot;</span><span class="s6">, </span><span class="s4">&quot;head&quot;</span><span class="s5">))</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">phrase</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># CLASSES</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">Name</span><span class="s2">:</span><span class="s1"> 
+    </span><span class="s0"># constructor methods (creates an instance of a class)</span><span class="s1"> 
+    </span><span class="s0"># self refers to the current instance of a class</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">__init__</span><span class="s5">(</span><span class="s1">self</span><span class="s6">, </span><span class="s1">first</span><span class="s6">, </span><span class="s1">middle</span><span class="s6">, </span><span class="s1">last</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        self.first </span><span class="s2">= </span><span class="s1">first 
+        self.middle </span><span class="s2">= </span><span class="s1">middle 
+        self.last </span><span class="s2">= </span><span class="s1">last 
+        </span><span class="s0"># creating a to-string method (allows us to examine the current state of a class object</span><span class="s1"> 
+        </span><span class="s7">def </span><span class="s1">__str__</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+            </span><span class="s7">return </span><span class="s1">self.first</span><span class="s6">, </span><span class="s1">self.middle</span><span class="s6">, </span><span class="s1">self.last 
+aName </span><span class="s2">= </span><span class="s1">Name</span><span class="s5">(</span><span class="s4">&quot;Peter&quot;</span><span class="s6">, </span><span class="s4">&quot;Gordon&quot;</span><span class="s6">, </span><span class="s4">&quot;Henry&quot;</span><span class="s5">)</span><span class="s1"> 
+result </span><span class="s2">= </span><span class="s1">str</span><span class="s5">(</span><span class="s1">aName</span><span class="s5">)</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">result</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># CLASSES NO. 2 (PROBABLY BETTER EXPLANATION BUT DOES NOT INCLUDE THE INIT METHOD)</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># Class of Car</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">car</span><span class="s2">:</span><span class="s1"> 
+    </span><span class="s0"># Create Attributes/Variables</span><span class="s1"> 
+    manufacturer </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s1"> 
+    model </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s1"> 
+    color </span><span class="s2">= </span><span class="s4">&quot;white&quot;</span><span class="s1"> 
+    age </span><span class="s2">= </span><span class="s3">0</span><span class="s1"> 
+    </span><span class="s0"># Create Identification Method</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">identify</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        </span><span class="s0"># Prints out Identification of New Object of Car Class</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;I am a {} year old {} {} {}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">self.age</span><span class="s6">, </span><span class="s1">self.color</span><span class="s6">, </span><span class="s1">self.manufacturer</span><span class="s6">, </span><span class="s1">self.model</span><span class="s5">))</span><span class="s1"> 
+    </span><span class="s0"># Create a new Object called &quot;petersCar&quot; of the Car Class</span><span class="s1"> 
+petersCar </span><span class="s2">= </span><span class="s1">car</span><span class="s5">()</span><span class="s1"> 
+</span><span class="s0"># Set the Attributes/Variables for the petersCar object</span><span class="s1"> 
+petersCar.manufacturer </span><span class="s2">= </span><span class="s4">&quot;Toyota&quot;</span><span class="s1"> 
+petersCar.model </span><span class="s2">= </span><span class="s4">&quot;Rav4&quot;</span><span class="s1"> 
+petersCar.color </span><span class="s2">= </span><span class="s4">&quot;Black&quot;</span><span class="s1"> 
+petersCar.age </span><span class="s2">= </span><span class="s3">5</span><span class="s1"> 
+</span><span class="s0"># Call the Method identify on the object &quot;petersCar&quot;</span><span class="s1"> 
+petersCar.identify</span><span class="s5">()</span><span class="s1"> 
+</span><span class="s0"># Output =&gt; I am a 5 year old Black Toyota Rav4</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># PASSWORD &amp; USERNAME CHECK IN PYTHON</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># AUTHOR PH</span><span class="s1"> 
+ 
+</span><span class="s0"># Username &amp; Pass Set (need initial setup by user)</span><span class="s1"> 
+userName </span><span class="s2">= </span><span class="s4">&quot;pgh&quot;</span><span class="s1"> 
+passWord </span><span class="s2">= </span><span class="s4">&quot;helpme&quot;</span><span class="s1"> 
+ 
+</span><span class="s0"># Ask User for their Username</span><span class="s1"> 
+usersName </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;Please enter your username: &quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># While Loop Username</span><span class="s1"> 
+</span><span class="s7">while</span><span class="s5">(</span><span class="s1">usersName </span><span class="s2">!= </span><span class="s1">userName</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    usersName </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;The username you entered is incorrect, please re-enter it: &quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># Confirm to User that Username was correct</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;----------------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;Password Correct&quot;</span><span class="s5">)</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;----------------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># Ask User for their Password</span><span class="s1"> 
+usersPass </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;Please enter your password: &quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># While Loop Password</span><span class="s1"> 
+</span><span class="s7">while</span><span class="s5">(</span><span class="s1">usersPass </span><span class="s2">!= </span><span class="s1">passWord</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    usersPass </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;The password you entered is incorrect, please re-enter it: &quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># Once Correct Details are Input, User is Greeted</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;-------------------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;Welcome back {}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">userName</span><span class="s5">))</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;-------------------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># CLASS INHERITANCE EXAMPLE</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">pet</span><span class="s2">:</span><span class="s1"> 
+    number_of_legs </span><span class="s2">= </span><span class="s3">0</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">sleep</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;zzz&quot;</span><span class="s5">)</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">count_legs</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;I have {} legs&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">self.number_of_legs</span><span class="s5">))</span><span class="s1"> 
+ 
+</span><span class="s0"># Dog Class Inherrits all methods and variables from Pet Class</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">dog</span><span class="s5">(</span><span class="s1">pet</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">bark</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;woof&quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+betsy </span><span class="s2">= </span><span class="s1">dog</span><span class="s5">()</span><span class="s1"> 
+betsy.number_of_legs </span><span class="s2">= </span><span class="s3">4</span><span class="s1"> 
+betsy.bark</span><span class="s5">()</span><span class="s1"> 
+betsy.sleep</span><span class="s5">()</span><span class="s1"> 
+betsy.count_legs</span><span class="s5">()</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s1">betsy.number_of_legs</span><span class="s5">)</span><span class="s1"> 
+ 
+</span><span class="s0"># Output =&gt;</span><span class="s1"> 
+</span><span class="s0">#   woof</span><span class="s1"> 
+</span><span class="s0">#   zzz</span><span class="s1"> 
+</span><span class="s0">#   I have 4 legs</span><span class="s1"> 
+</span><span class="s0">#   4</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># PERSONAL ATTEMPT AT USING OOP TO CREATE MY OWN TASK MANAGEMENT SYST AT THE COMMAND LINE (WORK IN PROGRESS</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0"># PETER'S TASK MANAGEMENT PROGRAM IN PYTHON 3</span><span class="s1"> 
+</span><span class="s0"># Task Class Creation</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">Task</span><span class="s5">()</span><span class="s2">:</span><span class="s1"> 
+    </span><span class="s0"># Class Constructor/Initializer (Called when a new instance is created)</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">__init__</span><span class="s5">(</span><span class="s1">self</span><span class="s6">, </span><span class="s1">priority </span><span class="s2">= </span><span class="s3">0</span><span class="s6">, </span><span class="s1">title </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">notes </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        self.priority </span><span class="s2">= </span><span class="s1">priority 
+        self.title </span><span class="s2">= </span><span class="s1">title 
+        self.notes </span><span class="s2">= </span><span class="s1">notes 
+        print</span><span class="s5">(</span><span class="s4">&quot;Priority: {}, Title: {}, Notes: {}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">self.priority</span><span class="s6">, </span><span class="s1">self.title</span><span class="s6">, </span><span class="s1">self.notes</span><span class="s5">))</span><span class="s1"> 
+ 
+    </span><span class="s0"># Class Method to edit task instances/objects</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">edit</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        self.priority </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;What is the new priority?: &quot;</span><span class="s5">)</span><span class="s1"> 
+        self.title </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;What is the new title?: &quot;</span><span class="s5">)</span><span class="s1"> 
+        self.notes </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;what are the new notes?: &quot;</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Task has been edited&quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+    </span><span class="s0"># Class Method to identify a particular task's Variables/Properties/Attributes</span><span class="s1"> 
+    </span><span class="s7">def </span><span class="s1">identify</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Priority: {}, Title: {}, Notes: {}&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">self.priority</span><span class="s6">, </span><span class="s1">self.title</span><span class="s6">, </span><span class="s1">self.notes</span><span class="s5">))</span><span class="s1"> 
+ 
+</span><span class="s0"># Start for User Interaction</span><span class="s1"> 
+</span><span class="s0"># Ask User what they want to do</span><span class="s1"> 
+print</span><span class="s5">(</span><span class="s4">&quot;Welcome to Peter's Task Manager&quot;</span><span class="s5">)</span><span class="s1"> 
+userAction </span><span class="s2">= </span><span class="s1">int</span><span class="s5">(</span><span class="s1">input</span><span class="s5">(</span><span class="s1">print</span><span class="s5">(</span><span class="s4">&quot;What do you want to do? 1 = add a task, 2 = see all tasks, 3 = edit a task?: &quot;</span><span class="s5">)))</span><span class="s1"> 
+ 
+</span><span class="s0"># Decision &amp; Consequences of User Action</span><span class="s1"> 
+</span><span class="s7">if</span><span class="s5">(</span><span class="s1">userAction </span><span class="s2">== </span><span class="s3">1</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    taskPriority </span><span class="s2">= </span><span class="s1">int</span><span class="s5">(</span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;What is the priority of the task 0 to 5 (0 is lowest priority): &quot;</span><span class="s5">))</span><span class="s1"> 
+    taskTitle </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;What is the title of the task?: &quot;</span><span class="s5">)</span><span class="s1"> 
+    taskNotes </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;Please write a one sentence description of the task: &quot;</span><span class="s5">)</span><span class="s1"> 
+    taskObject </span><span class="s2">= </span><span class="s1">taskTitle 
+    taskTitle </span><span class="s2">= </span><span class="s1">Task</span><span class="s5">(</span><span class="s1">taskPriority</span><span class="s6">, </span><span class="s1">taskTitle</span><span class="s6">, </span><span class="s1">taskNotes</span><span class="s5">)</span><span class="s1"> 
+    print</span><span class="s5">(</span><span class="s4">&quot;Task has been created:&quot;</span><span class="s5">)</span><span class="s1"> 
+</span><span class="s7">elif</span><span class="s5">(</span><span class="s1">userAction </span><span class="s2">== </span><span class="s3">2</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    </span><span class="s0"># NEED TO FIND OUT HOW TO PRINT OUT ALL INSTANCES OF THE CLASS &quot;TASK&quot; (IS THERE A BUILT IN?)</span><span class="s1"> 
+    print</span><span class="s5">(</span><span class="s4">&quot;Show All Tasks --- Work in Progress&quot;</span><span class="s5">)</span><span class="s1"> 
+</span><span class="s7">elif</span><span class="s5">(</span><span class="s1">userAction </span><span class="s2">== </span><span class="s3">3</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+    taskToEdit </span><span class="s2">= </span><span class="s1">input</span><span class="s5">(</span><span class="s4">&quot;What is the Title of the task you want to edit?: &quot;</span><span class="s5">)</span><span class="s1"> 
+    taskToEdit.edit</span><span class="s5">()</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0">#  CLASS CREATION OF A COMPUTER OBJECT USING STANDARD ATTRIBUTES</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s7">class </span><span class="s1">computer</span><span class="s2">:</span><span class="s1"> 
+ 
+    </span><span class="s7">def </span><span class="s1">__init__</span><span class="s5">(</span><span class="s1">self</span><span class="s6">, </span><span class="s1">brand </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">model </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">screenSize </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">hardDriveSize </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">memory </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s6">, </span><span class="s1">cpu </span><span class="s2">= </span><span class="s4">&quot;&quot;</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        self.brand </span><span class="s2">= </span><span class="s1">brand 
+        self.model </span><span class="s2">= </span><span class="s1">model 
+        self.screenSize </span><span class="s2">= </span><span class="s1">str</span><span class="s5">(</span><span class="s1">screenSize</span><span class="s5">)</span><span class="s1"> 
+        self.hardDriveSize </span><span class="s2">= </span><span class="s1">str</span><span class="s5">(</span><span class="s1">hardDriveSize</span><span class="s5">)</span><span class="s1"> 
+        self.memory </span><span class="s2">= </span><span class="s1">str</span><span class="s5">(</span><span class="s1">memory</span><span class="s5">)</span><span class="s1"> 
+        self.cpu </span><span class="s2">= </span><span class="s1">cpu 
+        print</span><span class="s5">(</span><span class="s4">&quot;------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Object {} Created.&quot;</span><span class="s1">.format</span><span class="s5">(</span><span class="s1">self</span><span class="s5">))</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;------------------&quot;</span><span class="s5">)</span><span class="s1"> 
+ 
+    </span><span class="s7">def </span><span class="s1">identify</span><span class="s5">(</span><span class="s1">self</span><span class="s5">)</span><span class="s2">:</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;PC Specs: &quot;</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;---------&quot;</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Brand: &quot;</span><span class="s6">, </span><span class="s1">self.brand</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Model: &quot;</span><span class="s6">, </span><span class="s1">self.model</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Screen Size in Inches: &quot;</span><span class="s6">, </span><span class="s1">self.screenSize</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Hard Drive in Gb: &quot;</span><span class="s6">, </span><span class="s1">self.hardDriveSize</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;Memory in Mb: &quot;</span><span class="s6">, </span><span class="s1">self.memory</span><span class="s5">)</span><span class="s1"> 
+        print</span><span class="s5">(</span><span class="s4">&quot;CPU: &quot;</span><span class="s6">, </span><span class="s1">self.cpu</span><span class="s5">)</span><span class="s1"> 
+ 
+vermit </span><span class="s2">= </span><span class="s1">computer</span><span class="s5">(</span><span class="s4">&quot;Asus&quot;</span><span class="s6">, </span><span class="s4">&quot;Zenbook&quot;</span><span class="s6">, </span><span class="s3">13</span><span class="s6">, </span><span class="s3">256</span><span class="s6">, </span><span class="s3">2</span><span class="s6">, </span><span class="s4">&quot;i5&quot;</span><span class="s5">)</span><span class="s1"> 
+vermit.identify</span><span class="s5">()</span><span class="s1"> 
+ 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span><span class="s1"> 
+</span><span class="s0">#  OTHER</span><span class="s1"> 
+</span><span class="s0"># ---------------------------------------------------------------------------------------------</span></pre>
+</body>
+</html>
